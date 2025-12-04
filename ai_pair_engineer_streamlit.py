@@ -133,7 +133,7 @@ with left_col:
             st.session_state.editor_content = suggested
             # keep last edit ts updated so autosuggest doesn't immediately retrigger
             st.session_state.last_edit_ts = time.time()
-            st.experimental_rerun()
+            st.rerun()
     if col_clear.button("Clear suggestion"):
         st.session_state.suggestion_md = None
         st.session_state.suggested_refactor_code = None
